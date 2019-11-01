@@ -5,6 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 // Components
 
 import Header from "./Components/Header";
+import Banner from "./Components/Banner";
 
 function App() {
   return (
@@ -12,16 +13,9 @@ function App() {
       <Header />
       <Container fluid>
         <Row style={{ height: "60vh" }}>
-          <Col>Banner Component</Col>
-        </Row>
-        <Row>
-          <Col>Projects displayed here</Col>
-        </Row>
-        <Row>
-          <Col>About</Col>
-        </Row>
-        <Row>
-          <Col>Contact</Col>
+          <Col>
+            <Banner />
+          </Col>
         </Row>
       </Container>
     </div>
