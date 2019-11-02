@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Header = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,28 +18,29 @@ const Header = props => {
   return (
     <div>
       <Navbar color="dark" light expand="md">
-        <NavbarBrand style={{ color: "white" }} href="/">
+        <NavbarBrand tag={Link} to="/" style={{ color: "white" }}>
           Daniel Shimield
         </NavbarBrand>
+
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink style={{ color: "white" }} href="/components/">
+              <NavLink tag={Link} style={{ color: "white" }} to="/projects">
                 Projects
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                style={{ color: "white" }}
-                href="https://github.com/reactstrap/reactstrap"
-              >
+              <NavLink tag={Link} to="/about" style={{ color: "white" }}>
                 About Me
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={{ color: "white" }} href="/components/">
-                Contact
+              <NavLink
+                href={`mailto:dxshim90@gmail.com`}
+                style={{ color: "white" }}
+              >
+                Contact Me
               </NavLink>
             </NavItem>
           </Nav>

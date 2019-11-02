@@ -1,6 +1,7 @@
 import React from "react";
 import VideoBackground from "./VideoBackgroud";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -11,9 +12,11 @@ const Banner = () => {
         <p className="lead">Full Stack Web Developer</p>
         <p>Lets Build Something Great Together!</p>
         <p className="lead">
-          <Button size="lrg" color="dark">
-            View My Portfolio
-          </Button>
+          <Link to="/projects">
+            <Button size="lrg" color="dark">
+              View My Portfolio
+            </Button>
+          </Link>
         </p>
       </div>
     </div>
