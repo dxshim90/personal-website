@@ -1,9 +1,16 @@
-import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import React, { Fragment } from "react";
+
 import ProjectList from "../Components/ProjectList";
 
 const Projects = () => {
-  return <ProjectList />;
+  return (
+    <Fragment>
+      <h1 style={{ marginTop: "1rem", textDecorationLine: "underline" }}>
+        My Projects
+      </h1>
+      <ProjectList />
+    </Fragment>
+  );
 };
 
 export default Projects;

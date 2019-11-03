@@ -10,16 +10,16 @@ class ProjectList extends React.Component {
 
   render() {
     return (
-      <Container>
-        {this.state.projects.map(project => {
-          return (
-            <Row key={project.id}>
-              <Col>
+      <Container fluid>
+        <Row>
+          {this.state.projects.map(project => {
+            return (
+              <Col key={project.id}>
                 <ProjectCard project={project} />
               </Col>
-            </Row>
-          );
-        })}
+            );
+          })}
+        </Row>
       </Container>
     );
   }
